@@ -1,0 +1,6 @@
+<!reports_page.html>
+{% with messages = get_flashed_messages() %}
+  {% if 'Report generated successfully' in messages %}
+    <a href="{{ url_for('download_report', filename='Tenant_Summary_Report.pdf') }}">Download Report</a>
+  {% endif %}
+{% endwith %}
